@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYH468MLYT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EYH468MLYT');
+  </script>
+  <meta charset="utf-8">
+  <meta name="keywords" content="SyCoMo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hierarchical Masked 3D Diffusion Model for Video Outpainting</title>
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<!-- Top. -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Hierarchical Masked 3D Diffusion Model for Video Outpainting</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://github.com/fanfanda">Fanda Fan</a><sup>1, 2, *</sup>,
+			</span>
+            <span class="author-block">
+              <a href="https://github.com/Gus-Guo">Chaoxu Guo</a><sup>3, *</sup>,
+			</span>
+            <span class="author-block">
+              <a href="https://github.com/culeao">Litong Gong</a><sup>3</sup>,
+			</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?hl=en&user=W7XDZ8gAAAAJ">Biao Wang</a><sup>3</sup>,
+			</span>
+            <span class="author-block">
+              <a href="https://yuningjiang.github.io">Yuning Jiang</a><sup>3</sup>
+      </span>
+            <span class="author-block">
+              <a href="https://www.benchcouncil.org/cjluo.html">Chunjie Luo</a><sup>1, &Dagger;</sup>
+      </span>
+            <span class="author-block">
+              <a href="https://www.zhanjianfeng.org/">Jianfeng Zhan</a><sup>1, 2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>1</sup>Institute of Computing Technology, Chinese Academy of Sciences, China</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>2</sup>University of Chinese Academy of Sciences, China</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>3</sup>Alibaba Group, China</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>&Dagger;</sup>Corresponding author</span>
+          </div>
+          
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://authors.elsevier.com/a/1g5Oz3k8X3maoD"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                  <a href="https://github.com/fanfanda/M3DDM/"
+                  	 class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Supplementary</span>
+                  </a>
+              </span>
+						
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="container has-text-justified">
+				<div class="content has-text-justified is-size-5">
+          We propose a Masked 3D Diffusion Model (<strong>M3DDM</strong>) and a hybrid coarse-to-fine inference pipeline for video outpainting. Our method can not only generate high temporal consistency and reasonable outpainting results but also alleviate the problem of artifact accumulation in long video outpainting. The top row shows the first and last frames of five video clips. Each row below shows the video outpainting results of our method.
+				</div>
+      </div>
+      <img src="assets/teaser.png" border="none" />
+    </div>
+  </div>
+</section>
+
+<!-- Abstract. -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+					<p>
+						Video outpainting aims to adequately complete missing areas at the edges of video frames. Compared to image outpainting, it presents an additional challenge as the model should maintain the temporal consistency of the filled area. In this paper, we introduce a masked 3D diffusion model for video outpainting. We use the technique of mask modeling to train the 3D diffusion model. This allows us to use multiple guide frames to connect the results of multiple video clip inferences, thus ensuring temporal consistency and reducing jitter between adjacent frames. Meanwhile, we extract the global frames of the video as prompts and guide the model to obtain information other than the current video clip using cross-attention. We also introduce a hybrid coarse-to-fine inference pipeline to alleviate the artifact accumulation problem. The existing coarse-to-fine pipeline only uses the infilling strategy, which brings degradation because the time interval of the sparse frames is too large. Our pipeline benefits from bidirectional learning of the mask modeling and thus can employ a hybrid strategy of infilling and interpolation when generating sparse frames. Experiments show that our method achieves state-of-the-art results in video outpainting tasks.
+					</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser. -->
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="assets/framework.png" border="none" />
+      <h2 class="subtitle has-text-centered">
+         An illustration of our framework.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Results</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item item-i1">
+          <table class="carousel-table" style="width:100%; font-weight: bold; font-size: 1em; border-spacing:1%;">
+            <tr>
+              <td>
+                <video class="vid_generation" id="i11" autoplay controls muted loop height=100>
+                  <source src="assets/1 - V4WydXR.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i12" autoplay controls muted loop height=100>
+                  <source src="assets/2 - q0AQN9P.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i13" autoplay controls muted loop height=100>
+                  <source src="assets/3 - gV6mv9T.mp4" type="video/mp4">
+                </video>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="item item-i2">
+          <table class="carousel-table" style="width:100%; font-weight: bold; font-size: 1em; border-spacing:1%;">
+            <tr>
+              <td>
+                <video class="vid_generation" id="i21" autoplay controls muted loop height=100>
+                  <source src="assets/4 - 2CVSIS5.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i22" autoplay controls muted loop height=100>
+                  <source src="assets/5 - PzCmyqd.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i23" autoplay controls muted loop height=100>
+                  <source src="assets/6 - IBXTRwZ.mp4" type="video/mp4">
+                </video>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="item item-i3">
+          <table class="carousel-table" style="width:100%; font-weight: bold; font-size: 1em; border-spacing:1%;">
+            <tr>
+              <td>
+                <video class="vid_generation" id="i31" autoplay controls muted loop height=100>
+                  <source src="assets/7 - UZPp3Pw.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i32" autoplay controls muted loop height=100>
+                  <source src="assets/8 - ozlm7TR.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i33" autoplay controls muted loop height=100>
+                  <source src="assets/9 - YaJnRa7.mp4" type="video/mp4">
+                </video>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="item item-i4">
+          <table class="carousel-table" style="width:100%; font-weight: bold; font-size: 1em; border-spacing:1%;">
+            <tr>
+              <td>
+                <video class="vid_generation" id="i41" autoplay controls muted loop height=100>
+                  <source src="assets/10 - 4B9EkSj.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i42" autoplay controls muted loop height=100>
+                  <source src="assets/11 - rcadJ3X.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i43" autoplay controls muted loop height=100>
+                  <source src="assets/12 - LSZY8EI.mp4" type="video/mp4">
+                </video>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="item item-i5">
+          <table class="carousel-table" style="width:100%; font-weight: bold; font-size: 1em; border-spacing:1%;">
+            <tr>
+              <td>
+                <video class="vid_generation" id="i51" autoplay controls muted loop height=100>
+                  <source src="assets/13 - YJlYELf.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i52" autoplay controls muted loop height=100>
+                  <source src="assets/14 - ij2GGVR.mp4" type="video/mp4">
+                </video>
+              </td>
+              <td>
+                <video class="vid_generation"  id="i53" autoplay controls muted loop height=100>
+                  <source src="assets/1 - V4WydXR.mp4" type="video/mp4">
+                </video>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{HU2022103686,
+title = {Decomposing style, content, and motion for videos},
+journal = {Journal of Visual Communication and Image Representation},
+volume = {89},
+pages = {103686},
+year = {2022},
+issn = {1047-3203},
+doi = {https://doi.org/10.1016/j.jvcir.2022.103686},
+url = {https://www.sciencedirect.com/science/article/pii/S1047320322002061},
+author = {Yaosi Hu and Dacheng Yin and Yuwang Wang and Zhenzhong Chen and Chong Luo}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/youncy-hu/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <div class="content">
+          <p>
+            This website is forked from 
+                  <a href="https://youncy-hu.github.io/SyCoMo/">SyCoMo</a>, 
+            			<a href="https://nivha.github.io/vgpnn/">VGPNN</a> and 
+						<a href="https://nerfies.github.io/">Nerfies</a> (<a href="https://github.com/nerfies/nerfies.github.io">source code</a>)
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>
