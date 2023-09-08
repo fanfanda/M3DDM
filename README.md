@@ -9,11 +9,11 @@ We will soon release a site where you can test your own videos (technical suppor
 ## Citation
 ```bash
 @misc{fan2023hierarchical,
-    title={Hierarchical Masked 3D Diffusion Model for Video Outpainting}, 
-    author={Fanda Fan and Chaoxu Guo and Litong Gong and Biao Wang and Tiezheng Ge and Yuning Jiang and Chunjie Luo and Jianfeng Zhan},
-    year={2023},
-    eprint={2309.02119},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
+      title={Hierarchical Masked 3D Diffusion Model for Video Outpainting}, 
+      author={Fanda Fan and Chaoxu Guo and Litong Gong and Biao Wang and Tiezheng Ge and Yuning Jiang and Chunjie Luo and Jianfeng Zhan},
+      year={2023},
+      eprint={2309.02119},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
