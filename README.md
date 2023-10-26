@@ -2,7 +2,7 @@
 
 This is the repository that contains website source code for the paper "Hierarchical Masked 3D Diffusion Model for Video Outpainting". [[Paper](https://arxiv.org/abs/2309.02119)][[Website](https://fanfanda.github.io/M3DDM/)] 
 
-We have made our API public at this [link](https://chuangyi.taobao.com), and merchant users (Currently only support business users) can upload video materials for video outpainting.
+We have made our API public at this [link](https://chuangyi.taobao.com), and merchant users (Currently only support business users) can upload video materials for video outpainting. [Tutorial](assets/Tutorial.pdf)
  
 ![Screenshot](assets/teaser.gif)
 
