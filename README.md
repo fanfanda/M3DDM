@@ -5,6 +5,8 @@ This is the repository that contains website source code for the paper "Hierarch
 We have made our API public at this [link](https://chuangyi.taobao.com), and merchant users (Currently only support business users) can upload video materials for video outpainting. We have provided a [tutorial](assets/Tutorial.pdf). Due to the practical application in real scenarios, after applying the video outpainting model, we have additionally included a super-resolution model to enhance the filled results after video outpainting. This is different from the pipeline used in the paper. However, in some cases, the super-resolution model may result in a performance decline.
  
 ## Update
+
+- **[2023/11/18]** After policy review, we are ready to open-source our model within three months!
 - **[2023/10/26]** Upload the tutorial PDF.
 
 ## Citation
