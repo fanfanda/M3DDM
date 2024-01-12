@@ -6,6 +6,7 @@ We have made our API public at this [link](https://chuangyi.taobao.com), and mer
  
 ## Update
 
+- **[2024/01/12]** :fire::fire::fire: We have released the inference code and model files on our [GitHub repository](https://github.com/alimama-creative/M3DDM-Video-Outpainting).
 - **[2023/11/18]** After policy review, we are ready to open-source our model within three months!
 - **[2023/10/26]** Upload the tutorial PDF.
 
