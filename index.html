@@ -14,7 +14,36 @@
   <meta name="keywords" content="SyCoMo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hierarchical Masked 3D Diffusion Model for Video Outpainting</title>
+  <style>
+  .news-section {
+    width: 80%; 
+    max-width: 600px; 
+    margin: 0px auto 10px;;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    text-align: left;
+  }
 
+  .news-section ol {
+      list-style: none;
+      padding: 0;
+  }
+
+  .news-section li {
+      margin-bottom: 8px; 
+  }
+
+  .news-section li:before {
+      content: "[" attr(data-date) "] ";
+      font-weight: bold;
+  }
+
+  .news-item {
+      display: inline;
+      margin-left: 5px;
+  }
+  </style>
   
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
@@ -109,16 +138,21 @@
                   <a href="https://github.com/fanfanda/M3DDM/"
                   	 class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fab fa-github"></i>
+                    <i class="fas fa-archive"></i>
                   </span>
-                  <span>Supplementary</span>
+                  <span>Web Source Code</span>
                   </a>
               </span>
-
-              <div class="content has-text-centered">
-							  We have made our API public at this <a href="https://chuangyi.taobao.com">link</a>, and merchant users (Currently only support business users) can upload video materials for video outpainting. We have provided a <a href="assets/Tutorial.pdf">tutorial</a>.
-						  </div>
-						
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/alimama-creative/M3DDM-Video-Outpainting"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>			
           </div>
         </div>
       </div>
@@ -126,6 +160,20 @@
   </div>
 </section>
 
+<section class="news-section">
+  <h2>News Updates</h2>
+  <ol>
+    <li data-date="2024/01/12">
+      <span class="news-item">🔥🔥🔥 We have released the inference code and model weights on our GitHub repository <a href="https://github.com/alimama-creative/M3DDM-Video-Outpainting">here</a>.</span>
+    </li>
+    <li data-date="2023/11/18">
+        <span class="news-item">After policy review, we are ready to open-source our model within three months!</span>
+    </li>
+    <li data-date="2023/10/26">
+        <span class="news-item">Upload the <a href="assets/Tutorial.pdf">tutorial</a> PDF. Make our API public at this <a href="https://chuangyi.taobao.com">link</a>.</span>
+    </li>
+  </ol>
+</section>
 
 <!-- Teaser. -->
 <section class="hero is-light">
