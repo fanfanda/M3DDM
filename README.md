@@ -12,12 +12,11 @@ We have made our API public at this [link](https://chuangyi.taobao.com), and mer
 
 ## Citation
 ```bash
-@misc{fan2023hierarchical,
-      title={Hierarchical Masked 3D Diffusion Model for Video Outpainting}, 
-      author={Fanda Fan and Chaoxu Guo and Litong Gong and Biao Wang and Tiezheng Ge and Yuning Jiang and Chunjie Luo and Jianfeng Zhan},
-      year={2023},
-      eprint={2309.02119},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{fan2023hierarchical,
+  title={Hierarchical Masked 3D Diffusion Model for Video Outpainting},
+  author={Fan, Fanda and Guo, Chaoxu and Gong, Litong and Wang, Biao and Ge, Tiezheng and Jiang, Yuning and Luo, Chunjie and Zhan, Jianfeng},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={7890--7900},
+  year={2023}
 }
 ```
